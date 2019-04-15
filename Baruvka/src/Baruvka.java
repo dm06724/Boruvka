@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+
 public class Baruvka {
 	
+	public static int V, E;
+	
 	public static void boruvka(Graph G) {
-		int V = G.V; int E = G.E;
 		int cheapest[] = new int[V];
 		Subset[] s = new Subset[V];
 		Edge[] e = new Edge[E];
@@ -78,36 +81,13 @@ public class Baruvka {
 		}
 	}
 	
+	public static void addEdge(int s, int d, int w) {
+		
+	}
+	
 	public static void main(String[] args) {
-		int V = 4;
-		int E = 5;
-		Graph G = new Graph();
-		
-		G.V = V;
-		G.E = E;
-		G.edge = new Edge[E];
-		System.out.print(E);
-		
-		G.edge[0].src=0;
-		G.edge[0].dest=1;
-		G.edge[0].weight=10;
-
-		G.edge[1].src=0;
-		G.edge[1].dest=2;
-		G.edge[1].weight=6;
-		
-		G.edge[2].src=0;
-		G.edge[2].dest=3;
-		G.edge[2].weight=5;
-		
-		G.edge[3].src=1;
-		G.edge[3].dest=3;
-		G.edge[3].weight=15;
-		
-		G.edge[4].src=2;
-		G.edge[4].dest=3;
-		G.edge[4].weight=4;
-		
+		V = 4;
+		E = 5;
 		boruvka(G);
 	}
 }
